@@ -50,8 +50,12 @@ app.get('/about', (req, res) => {
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Error'
-  })
-})
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs');
+});
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
